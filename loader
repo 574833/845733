@@ -30,7 +30,7 @@ Library.Themes = {
         Background = Color3.fromRGB(14, 15, 18),
         Surface    = Color3.fromRGB(20, 21, 26),
         Card       = Color3.fromRGB(26, 28, 35),
-        Border     = Color3.fromRGB(38, 40, 52),
+        Border     = Color3.fromRGB(55, 58, 65),
         Accent     = Color3.fromRGB(108, 92, 231),
         AccentSub  = Color3.fromRGB(80, 70, 180),
         Green      = Color3.fromRGB(72, 199, 116),
@@ -333,7 +333,7 @@ function Library:CreateWindow(config)
         Parent = sg
     }, {
         create("UICorner", { CornerRadius = UDim.new(0, 10) }),
-        create("UIStroke", { Color = Library.Theme.Border, Thickness = 1.2, Transparency = 0.2 })
+        create("UIStroke", { Color = Library.Theme.Border, Thickness = 1.2 })
     })
     window.Panel = panel
 
@@ -530,7 +530,8 @@ function Library:CreateTab(tabName)
         TextColor3 = Library.Theme.Muted,
         Parent = self.TabNav
     }, {
-        create("UICorner", { CornerRadius = UDim.new(0, 6) })
+        create("UICorner", { CornerRadius = UDim.new(0, 6) }),
+        create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 })
     })
     tab.TabBtn = tabBtn
 
@@ -606,6 +607,7 @@ function Library:CreateTab(tabName)
             Parent = parentObj
         }, {
             create("UICorner", { CornerRadius = UDim.new(0, 6) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 }),
             create("TextLabel", {
                 Size = UDim2.new(1, -40, 1, 0),
                 Position = UDim2.new(0, 10, 0, 0),
@@ -625,7 +627,8 @@ function Library:CreateTab(tabName)
             BorderSizePixel = 0,
             Parent = row
         }, {
-            create("UICorner", { CornerRadius = UDim.new(1, 0) })
+            create("UICorner", { CornerRadius = UDim.new(1, 0) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 })
         })
 
         local knob = create("Frame", {
@@ -673,7 +676,7 @@ function Library:CreateTab(tabName)
             Parent = parentObj
         }, {
             create("UICorner", { CornerRadius = UDim.new(0, 6) }),
-            create("UIStroke", { Color = Color3.new(1,1,1), Transparency = 0.85, Thickness = 1 })
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 })
         })
 
         btn.MouseButton1Click:Connect(function()
@@ -708,6 +711,7 @@ function Library:CreateTab(tabName)
             Parent = parentObj
         }, {
             create("UICorner", { CornerRadius = UDim.new(0, 6) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 }),
             create("TextLabel", {
                 Size = UDim2.new(1, -60, 0, 18),
                 Position = UDim2.new(0, 10, 0, 2),
@@ -747,7 +751,8 @@ function Library:CreateTab(tabName)
             BorderSizePixel = 0,
             Parent = sliderFrame
         }, {
-            create("UICorner", { CornerRadius = UDim.new(1, 0) })
+            create("UICorner", { CornerRadius = UDim.new(1, 0) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 })
         })
 
         local fill = create("Frame", {
@@ -833,7 +838,8 @@ function Library:CreateTab(tabName)
             ClipsDescendants = true,
             Parent = parentObj
         }, {
-            create("UICorner", { CornerRadius = UDim.new(0, 6) })
+            create("UICorner", { CornerRadius = UDim.new(0, 6) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 })
         })
 
         local header = create("TextButton", {
@@ -997,6 +1003,7 @@ function Library:CreateTab(tabName)
             Parent = parentObj
         }, {
             create("UICorner", { CornerRadius = UDim.new(0, 6) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 }),
             create("TextLabel", {
                 Size = UDim2.new(1, -90, 1, 0),
                 Position = UDim2.new(0, 10, 0, 0),
@@ -1072,6 +1079,7 @@ function Library:CreateTab(tabName)
             Parent = parentObj
         }, {
             create("UICorner", { CornerRadius = UDim.new(0, 6) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 }),
             create("TextLabel", {
                 Size = UDim2.new(0.45, -10, 1, 0),
                 Position = UDim2.new(0, 10, 0, 0),
@@ -1164,6 +1172,7 @@ function Library:CreateTab(tabName)
             Parent = parentObj
         }, {
             create("UICorner", { CornerRadius = UDim.new(0, 6) }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1 }),
             create("UIPadding", {
                 PaddingTop = UDim.new(0, 6),
                 PaddingBottom = UDim.new(0, 6),
@@ -1380,7 +1389,7 @@ function Library:CreateTab(tabName)
             Parent = page
         }, {
             create("UICorner", { CornerRadius = UDim.new(0, 8) }),
-            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1, Transparency = 0.5 }),
+            create("UIStroke", { Color = Library.Theme.Border, Thickness = 1.2 }),
             create("UIPadding", {
                 PaddingTop = UDim.new(0, 8),
                 PaddingBottom = UDim.new(0, 8),
